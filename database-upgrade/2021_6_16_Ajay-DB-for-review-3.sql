@@ -1,0 +1,1 @@
+ALTER TABLE `rating_review` ADD `reviewer_name` varchar(250) NULL AFTER `created`;

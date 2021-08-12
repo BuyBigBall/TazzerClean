@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<title>Tazzer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+    body {font-family: "Open Sans"}
+    #title::after{
+        position: absolute;
+        top: 140%;
+        left: 47%;
+        content: " ";
+        width: 6%;
+        height: 4px;
+        background: linear-gradient(136.96deg, #25CBF2 17.96%, #EA0078 80.35%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    #title{
+        position:relative;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #111111;       
+    }
+
+    .title-text{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #111111;
+    }
+    .article-header {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #393939;
+    }
+
+    .article-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 26px;
+        text-align: center;
+        color: #111111;
+    }
+    
+    .article-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 28%;
+        height: 70px;
+    }
+
+    .article-container {
+        width: 60%; 
+        margin-left: auto; 
+        margin-right: auto; 
+        margin-top: 50px;
+    }
+
+    .article-section {
+        width: 80%; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+    #list-title {
+        position:relative;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #373737;
+    }
+    
+    .list-title {
+        position:relative;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        margin-left: 10px;
+        color: darkgrey;
+    }
+
+    #list-title::after{
+        position: absolute;
+        top: 100%;
+        left: 18%;
+        content: " ";
+        width: 40%;
+        height: 4px;
+        background: linear-gradient(136.96deg, #25CBF2 17.96%, #EA0078 80.35%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .active {
+        color: #373737 !important;
+    }
+    .list p {
+        /* other styles goes here... */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .list {
+        margin-left: 10%;
+    }
+
+    .image-text {
+        background: #592A65; 
+        color: whitesmoke; 
+        width: 99.9%; 
+        padding: 9px; 
+        margin-top: 0px;
+        text-align: center;
+    }
+    
+    .list-view {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        color: #592A65;
+    }
+
+    .second-image {
+        margin-top: 50px;
+        opacity: 0.6;
+        background: linear-gradient(93.12deg, rgba(227, 8, 125, 0.35) 0%, rgba(49, 191, 235, 0.35) 100%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .second-image-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF
+    }
+
+    #second-image-title {
+        position: relative;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 38px;
+        color: #FFFFFF;
+    }
+    #second-image-title::after{
+        position: absolute;
+        top: 129%;
+        left: 0%;
+        content: " ";
+        width: 45%;
+        height: 2px;
+        background: white;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .second-image-text-1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        color: #FFFFFF;
+    }
+
+    .second-image-counter {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 38px;
+        color: #FFFFFF;
+    }
+
+    .second-image-counter-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+        color: #FFFFFF;
+        margin-top: -40px;
+    }
+    ul {
+        list-style: none;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        color: #111111;
+    }
+
+    ul li:before {
+        content: '✓';
+        color:#EA0078;
+    }
+
+    #phone-text-header {
+        position: relative;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+        color: #111111;
+    }
+
+    #phone-text-header::after{
+        position: absolute;
+        top: 140%;
+        left: 0%;
+        content: " ";
+        width: 11%;
+        height: 4px;
+        background: linear-gradient(136.96deg, #25CBF2 17.96%, #EA0078 80.35%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    .primary-button {
+        font-family: Poppins;
+        background: #592A65;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: bold;
+        /* font-size: 18px; */
+        /* line-height: 30px; */
+        display: flex;
+        color: white;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .review-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 27px;
+        color: #111111;
+    }
+
+    .review-box-header {
+        display: inline-block;
+    }
+    
+    .review-title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 0px;
+        color: #111111;
+    }
+
+    .review-organization {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 0px;
+        text-align: center;
+    }
+
+    .pro-button {
+        background: #A2A2A2;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        width: 40% !important;
+        height: 54.08px;
+        border-radius: 3px;
+        padding: 15px !important;
+        border: 1px solid white !important;
+        vertical-align: middle;
+    }
+
+    .seller-button {
+        background: #A2A2A2;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 3px;
+        width: 40% !important;
+        height: 54.08px;
+        margin-left:10px;
+        padding: 15px !important;
+        border: 1px solid white !important;
+    }
+
+    .first-image-title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 68px;
+        text-align: center;
+    }
+
+    .first-image-small-title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+    }
+    
+    .first-image-button {
+        background: #A2A2A2;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+        opacity: 0.7;
+        text-align: end;
+    }
+
+    .footer-title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+    }
+
+    .footer-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+    }
+
+    .footer-small-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+    }
+
+    .first-image-text {
+        top:21%;
+        left:23%; 
+        color: #FFFFFF;
+    }
+
+    .topnav {
+        overflow: hidden;
+        /* background-color: #333; */
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        /* background-color: #04AA6D; */
+        color: white;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+    .first-image-small-title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 10px;
+    }
+}
+    @media only screen and (min-width: 480px) {
+        .first-image-text {
+        top: 33%;
+        left: 40%;
+        color: #FFFFFF;
+    }
+    }
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-hide-small" style="background: #A2A2A2; color: white">
+  <a href="#" class="w3-bar-item w3-button" style="margin-left:10%"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <div class="w3-right" style="margin-right:10%">
+    <a href="#" class="w3-bar-item w3-button">Register</a>
+        <a href="#" class="w3-bar-item w3-button" >Login</a>
+    </div>
+</div>
+
+  <div class="w3-content" style="max-width:2000px;margin-top:0px">
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+  <!-- Image header -->
+    <div class="w3-display-container" id="home" style="background: black; z-index: 1 !important;">
+        <img class="w3-image" src="./images/image1.png" style="opacity: 0.6;" alt="Fashion Blog" width="1600" height="1060">
+
+        <div class="w3-display-topleft">
+            <div class="w3-bar " style="color: white">
+                <img class="w3-bar-item w3-image" src="./images/image_logo.png" alt="Fashion Blog" width="50" height="50">
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Home</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">SERVICES</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">SHOP</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">ABOUT US</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">CONTACT US</a>
+            </div>
+        </div>
+        <div class="w3-display-topright w3-hide-small w3-hide-medium">
+            <div class="w3-bar" style="color: white; margin-top: 10px; margin-right:100px">
+                <a href="#" class="w3-bar-item w3-button pro-button" >JOIN AS A PRO</a>
+                <a href="#" class="w3-bar-item w3-button seller-button" >BECOME A SELLER</a>
+            </div>
+        </div>
+        
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-64 w3-hide-small w3-center">
+            <p class="w3-hide-medium">Need any help?</p>
+            <p class="first-image-title w3-hide-small w3-hide-medium">The one-stop-shop platform for services & products near you.</p>
+            <p class="first-image-small-title w3-hide-small">You can buy or sell on our platform. Choose a service, book a time and pay online. <br>Our services could be accessible across the globe</p>
+            <p href="#" class="w3-center w3-button first-image-button w3-hide-small  ">
+            BOOK A SERVICE</p>
+        </div>
+        <div class="w3-display-position w3-center w3-row-padding" style="top: 10; left: 18%; padding:25px; background-color: white; border-radius: 10px; width: 65%; ; z-index: 99 !important; margin-top: -40px;">
+            <div class="w3-col m6 l6">
+                <input class="w3-input w3-border" type="text" placeholder="Start typing services e.g Scaffolding">
+            </div>
+            <div class="w3-col m4 l4">
+                <input class="w3-input w3-border" type="text" placeholder="Enter Postcode or Zipcode">
+            </div>
+            <div class="w3-col m2 l2">
+                <button class="w3-button primary-button">Get a quote</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container" style="margin-top: 50px;">
+      <p id="title">Our Process</p>
+      <p class="title-text">You can buy or sell on our platform. Choose a service, book a time and pay<br> online. Our services could be accessible across the globe</p>
+      <div class="article-container">
+            <div class="w3-third">
+                <div class="article-section">
+                <img src="./images/Group 13.png" class="article-image">
+                <p class="article-header">Pick a Time</p>
+                <p class="article-text">You can pick anytime and any day at your convince. You can also change or adjust your time to fit your lifestyle</p>
+            </div>
+            </div>
+            <div class="w3-third">
+                <div class="article-section">
+                <img src="./images/Mask Group (1).png" class="article-image">
+                <p class="article-header">Pick a Time</p>
+                <p class="article-text">You can pick anytime and any day at your convince. You can also change or adjust your time to fit your lifestyle</p>
+            </div>
+            </div>
+            <div class="w3-third">
+                <div class="article-section">
+                <img src="./images/Mask Group.png" class="article-image">
+                <p class="article-header">Pick a Time</p>
+                <p class="article-text">You can pick anytime and any day at your convince. You can also change or adjust your time to fit your lifestyle</p>
+            </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="w3-container" style="margin-top: 50px;">
+      <p id="title">Recent Services</p>
+      <p class="title-text">You can buy or sell on our platform. Choose a service, book a time and pay<br> online.Explore our services.</p>
+        <div class="article-container">
+          <div class="list">
+              <p id="list-title" class="active">Cleaning Services</p>
+              <p class="list-title">Pet Services</p>
+              <p class="list-title">Gardening Services</p>
+              <p class="list-title">Parlour Services</p>
+              <p class="list-title">Handyman Services</p>
+          </div>
+            <div class="w3-third">
+                <div class="w3-container">
+                    <img src="./images/Rectangle 11.png" style="width: 99.9%;">
+                    <p class="image-text" >Oven BBQ Deep Clean - Extractor</p>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-container">
+                    <img src="./images/Rectangle 27.png" class="" style="width: 99.9%;">
+                    <p class="image-text">Hairdressers default 2 hours </p>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-container">
+                    <img src="./images/Rectangle 29.png" class="" style="width: 99.9%;">
+                <p class="image-text">Air Ducting  Cleaning </p>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-container">
+                    <img src="./images/Rectangle 11.png" style="width: 99.9%;">
+                    <p class="image-text" >Oven BBQ Deep Clean - Extractor</p>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-container">
+                    <img src="./images/Rectangle 27.png" class="" style="width: 99.9%;">
+                    <p class="image-text">Hairdressers default 2 hours </p>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-container">
+                    <img src="./images/Rectangle 29.png" class="" style="width: 99.9%;">
+                <p class="image-text">Air Ducting  Cleaning </p>
+                </div>
+            </div>
+            <p class="list-view">View All</p>
+        </div>
+    </div>
+    <div class="w3-display-container">
+        <img class="w3-image" src="./images/Rectangle 31.png" class="second-image" alt="Fashion Blog" width="1600" height="448">
+        <div class="w3-display-position"  style="top: 65px; left:22%">
+            <div class="w3-col m3 l3">
+                <p class="second-image-text">Fun facts</p>
+                <p id="second-image-title">What we did?</p>
+                <p class="second-image-text-1">You can buy or sell on our platform. Choose a service, book a time and pay online.Explore our services.</p>
+            </div>
+            <div class="w3-col m9 l9">
+                <div style="display: inline-block; margin-left: 10%;">
+                    <p class="second-image-counter">4500</p>
+                    <p class="second-image-counter-text">Home Cleaned</p>
+                    <p class="second-image-counter">3k</p>
+                    <p class="second-image-counter-text">Running Projects</p>
+                </div>
+                <div style="display: inline-block; margin-left: 10%;">
+                    <p class="second-image-counter">16k</p>
+                    <p class="second-image-counter-text">People visited </p>
+                    <p class="second-image-counter">10+</p>
+                    <p class="second-image-counter-text">Countries </p>
+                </div>
+                <div style="display: inline-block; margin-left: 10%;">
+                    <p class="second-image-counter">2k</p>
+                    <p class="second-image-counter-text">Staff Members</p>
+                    <p class="second-image-counter">1500</p>
+                    <p class="second-image-counter-text">Task Daily </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container" style="margin-top: 50px;">
+        <div class="w3-container" style="width: 80%; margin-left: auto; margin-right: auto;">
+            <div class="w3-col m6 l6">
+                <div style="width:80%; margin-left:auto; margin-top: 20%;">
+                <p id="phone-text-header">Even better on your phone</p>
+                <ul>
+                    <li>  Book and manage appointments
+                    <li>  Message your pro</li>
+                    <li>  View pro profile and rating</li>
+                    <li>  See real-time location</li>
+                  </ul>
+                  <div>
+                    <a target="_blank" href="https://apps.apple.com/bg/app/tazzerclean"><img
+                      alt=""
+                      src="images/goolgestore.png"
+                      transition="scale-transition"
+                    /></a>
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=tazzerclean.co.uk"><img
+                      alt=""
+                      src="images/appstore.png"
+                      transition="scale-transition"
+                    /></a>
+                  </div>
+                  </div>
+            </div>
+            <div class="w3-col m6 l6">
+                <img src="./images/26 1.png"  height="100%" width="130%">
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container" style="margin-top: 50px;">
+        <p id="title">Watch Video</p>
+        <p class="title-text">We provide safe vehicles and professional experts, which means you can <br> expect a first class, reliable service.</p>
+          <div class="article-container">
+                <iframe class="videoTag" height="315" width="100%" src="https://www.youtube.com/embed/cF9BeGtxXGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+    </div>
+
+    <div class="w3-container" style="margin-top: 50px;">
+        <p id="title">Contact Us</p>
+        <p class="title-text">Please, Fill the form and we will get back to you soon.</p>
+        <div class="w3-row-padding" style="width: 60%; margin-left: auto; margin-right: auto;">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="First Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Last Name">
+            </div>
+          </div>
+        <div class="w3-row-padding" style="width: 60%; margin-left: auto; margin-right: auto; margin-top: 20px;">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="First Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Last Name">
+            </div>
+            <button class="w3-button primary-button"  style="margin-left: auto; margin-right: auto; margin-top: 100px;" >Submit</button>
+        </div>
+    </div>
+    
+    <div class="w3-container" style="margin-top: 50px;">
+        <p id="title">Testimonials</p>
+        <p class="title-text">Check what our client says about us</p>
+        <div class="article-container">
+            <div class="w3-third">
+                <div class="article-section">
+                <img src="./images/quote-left.png" class="review-image">
+                <p class="review-text">We booked the after-party cleaning for a 4-room apartment. The job 
+                    was impeccable clean and organised, as promised. We would use the service again.</p>
+                <div class="review-box-header">
+                    <img
+                        alt=""
+                        src="./images/Ellipse 4.png"
+                        transition="scale-transition"
+                        style="width: 50px; height: 50px; border-radius: 50%; margin-top: -25px; margin-right: 10px;"
+                    >
+                    <div style="display: inline-block;">
+                        <p class="review-title">Neil Ronald</p>
+                        <p class="review-organization">Sarah, Microsoft</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="w3-third">
+                <div class="article-section">
+                <img src="./images/quote-left.png" class="review-image">
+                <p class="review-text">We booked the after-party cleaning for a 4-room apartment. The job 
+                    was impeccable clean and organised, as promised. We would use the service again.</p>
+                    <div class="review-box-header">
+                        <img
+                            alt=""
+                            src="./images/Ellipse 4.png"
+                            transition="scale-transition"
+                            style="width: 50px; height: 50px; border-radius: 50%; margin-top: -25px; margin-right: 10px;"
+                        >
+                        <div style="display: inline-block;">
+                            <p class="review-title">Neil Ronald</p>
+                            <p class="review-organization">Sarah, Microsoft</p>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <div class="w3-third">
+                <div class="article-section">
+                <img src="./images/quote-left.png" class="review-image">
+                <p class="review-text">We booked the after-party cleaning for a 4-room apartment. The job 
+                    was impeccable clean and organised, as promised. We would use the service again.</p>
+                    <div class="review-box-header">
+                        <img
+                            alt=""
+                            src="./images/Ellipse 4.png"
+                            transition="scale-transition"
+                            style="width: 50px; height: 50px; border-radius: 50%; margin-top: -25px; margin-right: 10px;"
+                        >
+                        <div style="display: inline-block;">
+                            <p class="review-title">Neil Ronald</p>
+                            <p class="review-organization">Sarah, Microsoft</p>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <div class="w3-center" style="">
+                <img src="./images/Ellipse 1.png">
+                <img src="./images/Ellipse 2.png">
+                <img src="./images/Ellipse 1.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container" style="background: #592A65; color:white; width: 100%; margin-top: 50px;">
+        <div style="width:80%; margin-left: auto; margin-right: auto; margin-top: 40px; padding-bottom: 40px;">
+            <div class="w3-row">
+                <div class="w3-col m3 l3">
+                    <img  src="./images/image_logo.png" alt="Fashion Blog" style="width: 28%; height: 20%; padding-top: 23px;">
+                    <p class="footer-text"><img src="./images/locate.svg">&nbsp; Yorkshire, S66 7AW</p>
+                    <p class="footer-text"><img src="./images/call.svg">&nbsp; (+44)(0)79 6124 2587</p>
+                    <p class="footer-text"><img src="./images/mail-box.svg">&nbsp; info@tazzerclean.co.uk</p>
+                    <img src="./images/googlestore(1).png">
+                    <img src="./images/appstore (1).png">
+                </div>
+                <div class="w3-col m3 l3">
+                    <p class="footer-title">Popular Services</p>
+                    <p class="footer-text">  Book and manage appointments</p>
+                    <p class="footer-text">  Message your pro</p>
+                    <p class="footer-text">  View pro profile and rating</p>
+                    <p class="footer-text">  See real-time location</p>
+                </div>
+                <div class="w3-col m3 l3">
+                    <p class="footer-title">Useful Links</p>
+                    <p class="footer-text">Blog</p>
+                    <p class="footer-text">Support/Help</p>
+                    <p class="footer-text">Privacy Policy</p>
+                    <p class="footer-text">Return Policy</p>
+                    <p class="footer-text">Service Terms</p>
+                </div>
+                <div class="w3-col m3 l3">
+                    <p class="footer-title"> Newsletter</p>
+                    <p class="footer-text">Signup for our newsletter to get the latest <br>news, updates and special offers </p>
+                    <div class="w3-row w3-section">
+                        <div class="w3-col" style="width:80%">
+                            <input class="w3-input w3-border"  style="border-radius: 5px 0 0 5px; opacity: 0.6;" name="first" type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="w3-rest" style="background: #EA0078;
+                        border-radius: 0px 5px 5px 0px; height:40px" ><i class="w3-xxlarge fa fa-long-arrow-right" style="margin-left: 11px;"></i></div>
+                    </div>
+                    <p class="footer-small-text">Your email is safe with us. We don’t spam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-bar w3-hide-small" style="background: #592A65; color: white; border-top: 1px solid white;">
+        <div style="width: 80%; margin-left: auto; margin-right: auto;">
+            <div class="w3-left" style="margin-right:10%">
+            <a href="#" class="w3-bar-item w3-button">© Copyright 2021</a>
+            </div>
+            <div class="w3-right">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+      </div>
+    </div>
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+
+function hamburger() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+.payment-gateway-box {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.payment-gateway-box .cate-widget {
+    width: 300px;
+    height: 200px;
+    display: inline-table;
+    cursor: pointer;
+}
+
+.payment-gateway-box .cate-widget img {
+    width: 100%;
+    height: 100%;
+}

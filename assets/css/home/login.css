@@ -1,0 +1,178 @@
+body {
+    background-color: #ffffff;    
+}
+
+.container {
+    width: 100%;
+}
+
+.welcome-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.login-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.v-sheet {
+    border-radius: 0;
+}
+
+.v-card {
+    border-width: thin;
+    display: block;
+    max-width: 100%;
+    outline: none;
+    text-decoration: none;
+    transition-property: box-shadow,opacity;
+    overflow-wrap: break-word;
+    position: relative;
+    white-space: normal;
+}
+
+.theme--light.v-sheet {
+    background-color: #fff;
+    border-color: #fff;
+    color: rgba(0,0,0,.87);
+}
+
+.v-sheet:not(.v-sheet--outlined) {
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 14%), 0 0 0 0 rgb(0 0 0 / 12%);
+}
+
+.my-12 {
+    margin-top: 48px!important;
+    margin-bottom: 48px!important;
+}
+
+.mx-auto {
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+
+.theme--light.v-card {
+    background-color: #fff;
+    color: rgba(0,0,0,.87);
+}
+
+.v-sheet.v-card {
+    border-radius: 4px;
+}
+
+/* .v-sheet.v-card:not(.v-sheet--outlined) {
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+} */
+
+.logincard[data-v-9cf711f2] {
+    display: flex;
+    box-shadow: 0 0 25px 0 #d3d3d3 !important;
+}
+
+.card-left[data-v-9cf711f2] {
+    width: 50%;
+    background-color: #ebf7ff;
+    background-image: url(../../img/logo-icon-old.png),url(../../img/login/Path1.png);
+    background-size: 30%,70%;
+    background-position: 20px 20px,100% 0;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.v-card>.v-card__progress+:not(.v-btn):not(.v-chip), .v-card>:first-child:not(.v-btn):not(.v-chip) {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.card-left[data-v-9cf711f2] p {
+    padding: 0 20px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.card-right[data-v-9cf711f2] {
+    width: 50%;
+    display: inline-block;
+}
+
+.v-card>:last-child:not(.v-btn):not(.v-chip) {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.login-box {
+    width: 90%;
+}
+
+.login-card-container .login-btn {
+    width: 200px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.login-card-container {
+    /* margin-top: calc(50% - 300px); */
+    padding: 10px 6%;
+}
+
+.login-card-container .user_forgot_pwd {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.login-card-container .form-control {
+    margin-top: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(158, 158, 158);
+}
+
+.login-card-container .form-control:focus {
+    border-color: #000000;
+}
+
+.user_join_us {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.925rem;
+}
+/* ---- reponsive --------- */
+@media (max-width: 992px) {
+	.login-box {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .card-left[data-v-9cf711f2] {
+        display: none;
+    }
+
+    .card-right[data-v-9cf711f2] {
+        width: 100%;
+        background-color: #ebf7ff;
+        background-image: url(../../img/logo-icon-old.png),url(../../img/login/Path1.png);
+        background-size: 30%,70%;
+        background-position: 20px 20px,100% 0;
+        text-align: center;
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+    }
+
+    .card-right .v-card__title {
+        margin-top: 35%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

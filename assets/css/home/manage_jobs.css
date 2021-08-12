@@ -1,0 +1,23 @@
+body {
+    background-color: #ffffff;    
+}
+
+#job-list-table {
+    border: 1px solid #6a6a6a;
+    padding: 10px;
+}
+
+/* ---- reponsive --------- */
+@media (max-width: 992px) {
+	
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

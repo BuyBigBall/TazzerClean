@@ -1,0 +1,5 @@
+ALTER TABLE `blog`   
+	ADD COLUMN `image` VARCHAR(255) NOT NULL AFTER `content`;
+
+ALTER TABLE `blog`   
+	ADD COLUMN `status` TINYINT(1) DEFAULT 1 NOT NULL AFTER `rating`;
